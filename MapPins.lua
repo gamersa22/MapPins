@@ -1842,17 +1842,17 @@ u38_telvannipeninsula={--Provided by Gamer1986PAN
 {.769,.540,198098},--Telvanni Peninsula Treasure Map II
 {.637,.498,198099},--Telvanni Peninsula Treasure Map III
 {.289,.385,198100},--Telvanni Peninsula Treasure Map IV
-{.732,.551,198291},--Blacksmith Survey: Telvanni Peninsula
-{.597,.504,198297},--Woodworker Survey: Telvanni Peninsula
-{.488,.756,198294},--Jewelry Crafting Survey: Telvanni Peninsula
+{.732,.551,198291,1},--Blacksmith Survey: Telvanni Peninsula
+{.597,.504,198297,1},--Woodworker Survey: Telvanni Peninsula
+{.488,.756,198294,1},--Jewelry Crafting Survey: Telvanni Peninsula
 {.214,.456,197842}}, -- Hand of Almalexia Clue
 u38_apocrypha={--Provided by Gamer1986PAN
 {.384,.465,196203},--Apocrypha CE Treasure Map
 {.754,.400,198101},--Apocrypha Treasure Map I
 {.454,.338,198102},--Apocrypha Treasure Map II
-{.798,.7089,198290},--Clothier Survey: Apocrypha
-{.696,.4008,198289},--Enchanter Survey: Apocrypha
-{.400,.388,198288}},--Alchemist Survey: Apocrypha
+{.798,.7089,198290,1},--Clothier Survey: Apocrypha
+{.696,.4008,198289,1},--Enchanter Survey: Apocrypha
+{.400,.388,198288,1}},--Alchemist Survey: Apocrypha
 u36_galenisland={--Provided by art1ink
 {.44,.247,192370},--Galen Treasure Map I
 {.403,.413,192371},--Galen Treasure Map II
@@ -6493,7 +6493,7 @@ local PinTooltipCreator={
 		end
 	end
 }
-
+--makemapfilter
 local function MakeMapFiltersScroll()
 	if WORLD_MAP_FILTERS.pvePanel then
 		if WORLD_MAP_FILTERS.pvePanel.checkBoxPool then
@@ -6550,7 +6550,7 @@ local function MakeMapFiltersScroll()
 		end
 		if ZO_WorldMapFiltersPvPContainer then ZO_WorldMapFiltersPvPContainer:SetAnchorFill() end
 	end
-
+--makemapfilter enf
 	if WORLD_MAP_FILTERS.imperialPvPPanel then
 		if WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool then
 			WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool.parent=ZO_WorldMapFiltersImperialPvPContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersImperialPvPContainer",ZO_WorldMapFiltersPvP,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
@@ -6579,7 +6579,7 @@ local function MakeMapFiltersScroll()
 		if ZO_WorldMapFiltersImperialPvPContainer then ZO_WorldMapFiltersImperialPvPContainer:SetAnchorFill() end
 	end
 end
-
+--makemapfilter enf
 local function OnLoad(eventCode,addonName)
 	if addonName~=AddonName then return end
 	EVENT_MANAGER:UnregisterForEvent(AddonName,EVENT_ADD_ON_LOADED)

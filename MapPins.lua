@@ -1897,7 +1897,7 @@ blackwood={--Provided by Shantoo
 {.651,.427,175545},--CE Treasure Map II
 {.317,.354,175546}},--CE Treasure Map III
 reach={{.386,.681,171474}},U28_blackreach={{.156,.725,171475}},--Provided by SuppeFuss165
-westernskryim={{.33,.297,166460,1},{.567,.684,166461,1},{.194,.430,166462,1},{.755,.571,166465,1},{.562,.488,166459,1},{.44,.58,166464,4},{.407,.51,166035},{.54,.4627,166040},{.537,.591,166041},{.289,.62,166042},{.264,.554,166043}},
+westernskryim={{.33,.297,166460,1},{.573,.68,166461,1},{.194,.430,166462,1},{.755,.571,166465,1},{.562,.488,166459,1},{.44,.58,166464,4},{.407,.51,166035},{.54,.4627,166040},{.537,.591,166041},{.289,.62,166042},{.264,.554,166043}},
 blackreach={{.824,.482,166036},{.894,.554,166037},{.21,.674,166038},{.224,.587,166039}},
 southernelsweyr={{.468,.636,156716},{.293,.256,156715}},
 elsweyr={{.319,.725,147922},{.699,.251,147923},{.811,.361,147924},{.6116,.4083,151613},{.4213,.2241,151614},{.4007,.5826,151615},{.2691,.7504,151616},{.4872,.6790,151617},{.6343,.4535,151618},{.4410,.3880,151602,1},{.3157,.5561,151599,1},{.4283,.4209,151601,1},{.2685,.4400,151598,1},{.4918,.6791,151600,1},{.6120,.6430,151603,4}},
@@ -1932,7 +1932,7 @@ ebonheart={{.540,.091,57746,1}},
 deshaan={
 {.18,.48,187890},--Hlaalu Councilor Clue (Deshaan)
 {.526,.569,197843},--Mercymother Elite Clue
-{.259,.550,43661},{.186,.474,43662},{.463,.405,43663},{.758,.561,43664},{.899,.549,43665},{.792,.509,43666},{.352,.640,44934},{.476,.420,57748,1},{.787,.408,57751,1},{.238,.481,57755,1},{.148,.496,57772,1},{.637,.550,57817,1},{.485,.615,139426,4}},
+{.261,.552,43661},{.186,.474,43662},{.463,.405,43663},{.758,.561,43664},{.899,.549,43665},{.792,.509,43666},{.352,.640,44934},{.476,.420,57748,1},{.787,.408,57751,1},{.238,.481,57755,1},{.148,.496,57772,1},{.637,.550,57817,1},{.485,.615,139426,4}},
 shadowfen={{.483,.701,153647,"shield"},{.369,.150,43667},{.708,.392,43668},{.704,.701,43669},{.609,.611,43670},{.406,.469,43671},{.238,.564,43672},{.642,.455,44943},{.751,.430,57758,1},{.358,.265,57775,1},{.795,.852,57789,1},{.400,.695,57803,1},{.580,.679,57820,1},{.888,.686,139428,4}},
 eastmarch={{.431,.587,153643,"2haxe"},{.441,.374,43673},{.313,.458,43674},{.430,.591,43675},{.366,.598,43676},{.736,.660,43677},{.605,.539,43678},{.713,.583,44935},{.680,.612,57761,1},{.379,.604,57778,1},{.353,.288,57801,1},{.530,.414,57807,1},{.452,.497,57823,1},{.392,.686,139440,4}},
 therift={
@@ -5181,15 +5181,15 @@ local FishingZones={
 	[17]=474,--Alik'r Desert
 	[18]=485,--Greenshade
 	[19]=479,--Shadowfen
-	[37]=489,--Cyrodiil
-	[154]=490,--Coldhabour
+	[38]=489,--Cyrodiil
+	[155]=490,--Coldhabour
 	[178]=483,--Auridon
 	[179]=487,--Reaper's March
-	[180]=484,--Grahtwood
-	[500]=916,--Carglorn
+	[181]=484,--Grahtwood
+	[501]=916,--Carglorn
 	[109]=493,--Bleakrock
-	[304]=491,--Stros M'Kai
-	[306]=492,--Khenarthi's Roost
+	[305]=491,--Stros M'Kai
+	[307]=492,--Khenarthi's Roost
 	--DLC
 	[346]=1186,--Imperial City
 	[379]=1340,--Wrothgar
@@ -5199,15 +5199,15 @@ local FishingZones={
 	[589]=2027,--Clockwork City
 	[590]=2027,--Clockwork City Brass Fortress
 	[616]=2191,--Summerset
-	[632]=2240,--Arteum
+	[633]=2240,--Arteum
 	[407]=2295,--Murkmire
-	[681]=2412,--Northern Elsweyr
-	[720]=2566,--Southern Elsweyr
-	[743]=2655,--Greymoor
-	[783]=2861,--Markarth
-	[834]=2981,--Blackwood
-	[857]=3144,--Deadlands
-	[883]=3269,--High Isle
+	[682]=2412,--Northern Elsweyr
+	[721]=2566,--Southern Elsweyr
+	[744]=2655,--Greymoor
+	[784]=2861,--Markarth
+	[835]=2981,--Blackwood
+	[858]=3144,--Deadlands
+	[884]=3269,--High Isle
 	[929]=3500,--Firesong
 	[958]=3636,--Necrom
 	bleakrockvillage=493,
@@ -6494,9 +6494,9 @@ local PinTooltipCreator={
 		end
 	end
 }
---makemapfilter
 local function MakeMapFiltersScroll()
-	if WORLD_MAP_FILTERS.pvePanel then
+--	local WORLD_MAP_FILTERS = ZO_InitializingObject:Subclass()  -- Add this line into the MakeMapFiltersScroll function.
+ 	if WORLD_MAP_FILTERS.pvePanel then
 		if WORLD_MAP_FILTERS.pvePanel.checkBoxPool then
 			WORLD_MAP_FILTERS.pvePanel.checkBoxPool.parent=ZO_WorldMapFiltersPvEContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersPvEContainer",ZO_WorldMapFiltersPvE,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
 			for i,control in pairs(WORLD_MAP_FILTERS.pvePanel.checkBoxPool.m_Active) do
@@ -6551,7 +6551,7 @@ local function MakeMapFiltersScroll()
 		end
 		if ZO_WorldMapFiltersPvPContainer then ZO_WorldMapFiltersPvPContainer:SetAnchorFill() end
 	end
---makemapfilter enf
+
 	if WORLD_MAP_FILTERS.imperialPvPPanel then
 		if WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool then
 			WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool.parent=ZO_WorldMapFiltersImperialPvPContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersImperialPvPContainer",ZO_WorldMapFiltersPvP,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
@@ -6579,8 +6579,9 @@ local function MakeMapFiltersScroll()
 		end
 		if ZO_WorldMapFiltersImperialPvPContainer then ZO_WorldMapFiltersImperialPvPContainer:SetAnchorFill() end
 	end
+
 end
---makemapfilter enf
+
 local function OnLoad(eventCode,addonName)
 	if addonName~=AddonName then return end
 	EVENT_MANAGER:UnregisterForEvent(AddonName,EVENT_ADD_ON_LOADED)

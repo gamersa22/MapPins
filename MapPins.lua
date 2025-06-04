@@ -285,11 +285,11 @@ local Localization={
 		Gold_Road="Gold Road",
 		Seasons_of_the_Worm_Cult="Seasons of the Worm Cult",
 		},
-es={--provided by EthanC-Sleepzone 1.98.5
+es={--provided by EthanC-Sleepzone 1.98.7
 		-- Agua
 		Lake = "Lago", Foul = "Sucia", River = "Río", Salt = "Salada", Oily = "Aceitosa", Mystic = "Mística", Running = "Corriente",
 		-- Portales
-		Portals = "Portales", Celestial_Rifts = "Fisuras celestiales", Dark_Fissures = "Fisuras oscuras", Oblivion_Portals = "Portales de Oblivion", Shadow_Fissures = "Fisuras sombrías", Lava_Lashers = "Apaciguador de la lava",Soul_Reaper="Soul Reaper",
+		Portals = "Portales", Celestial_Rifts = "Fisuras celestiales", Dark_Fissures = "Fisuras oscuras", Oblivion_Portals = "Portales de Oblivion", Shadow_Fissures = "Fisuras sombrías", Lava_Lashers = "Apaciguador de la lava",Soul_Reaper="Segador de almas",
 		-- Filtros
 		Delve_bosses = "Jefes de mazmorras", Delve_bosses_done = "Jefes de mazmorras (completados)",
 		Skyshards = "Fragmentos del cielo", Skyshards_done = "Fragmentos del cielo (recogidos)",
@@ -322,7 +322,7 @@ es={--provided by EthanC-Sleepzone 1.98.5
 		High_Isle = "Isla Alta",
 		Necrom = "Necrom",
 		Gold_Road = "Gold Road",
-		Seasons_of_the_Worm_Cult="Seasons of the Worm Cult",
+		Seasons_of_the_Worm_Cult="Temporadas del Culto del Gusano",
 		},
 	zh={--provided by @ADGbehCFI 1.98
 		--Water
@@ -5539,7 +5539,7 @@ u32deadlandszone={
 },
 u46_overland={
 [26]={{.3,.52,6},{.34,.621,6},{.34,.709,6},{.296,.522,6},{.322,.479,6},{.334,.678,6},{.342,.684,6},{.364,.67,6},{.387,.715,6},{.385,.621,6},{.409,.428,6},{.417,.626,6},{.334,.455,6},{.417,.756,6},{.458,.536,6},{.478,.548,6},{.489,.571,6},{.509,.536,6},{.557,.666,6}},
-[91]={{.353,.713,4432},{.361,.544,4432},{.366,.473,4432},{.367,.619,4432},{.481,.435,4432},{.484,.543,4432},{.507,.575,4432}},--Wanderers of Western Solstice
+[91]={{.293,.511,4432},{.353,.713,4432},{.361,.544,4432},{.366,.473,4432},{.367,.619,4432},{.481,.435,4432},{.484,.543,4432},{.507,.575,4432},{.510,.646,4432}},--Wanderers of Western Solstice
 [93]={--Sanguine's Delights
 {.327,.645,4435,1},--Drink at Sanguine's Shrine
 {.331,.523,4435,2},--Drink at Shor's Stand

@@ -6979,7 +6979,7 @@ local MapPinCallback={
 			end
 		end
 	end,
-	[34]=function(i,subzone)--Lightbringer
+	[43]=function(i,subzone)--Lightbringer
 		local mapData=Achievements[subzone]
 		if mapData then
 			mapData=mapData[i]
@@ -7165,7 +7165,7 @@ local function CompassPinAddCallback(i)
 			if mapData then
 				for _,pinData in pairs(mapData) do
 					local AchName,Completed=pinData[3] or "",nil
-					if i==34 then --Lightbringer
+					if i==43 then --Lightbringer
 						local zone=ZoneAchievement[subzone]
 						if zone then
 							AchName="Lightbringer"
@@ -7728,8 +7728,8 @@ local PinTooltipCreator={
 			for _,id in pairs(pinTag[4]) do
 				desc1=desc1..("\n|H1:item:%d:359:50:0:0:0:0:0:0:0:0:0:0:0:0:1:0:0:0:10000:0|h|h"):format(id)
 			end
-		elseif pinTag[1]==34 then	--Lightbringer
-			icon=CustomPins[34].texture
+		elseif pinTag[1]==43 then	--Lightbringer
+			icon=CustomPins[43].texture
 			name=GetString(SI_JOURNAL_MENU_ACHIEVEMENTS) or "Achievements"
 			desc=zo_strformat("|t24:24:<<4>>|t <<1>>\n", GetAchievementInfo(873))--Lightbringer
 			..zo_strformat("|t24:24:<<4>>|t <<1>>\n", GetAchievementInfo(871))--Give to Poor

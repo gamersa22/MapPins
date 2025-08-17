@@ -1,6 +1,6 @@
 # MapPins
-Little add-on (420kb). It adds additional pins on your ingame map.
-
+Little add-on (553kb). It adds additional pins on your ingame map.
+Now Suports Gamepad / console
 If you want to help to add survey/treasure maps then:
 1. Right click on map in your inventory>link in chat, copy this string.
 2. Find location, type /loc, copy this string.

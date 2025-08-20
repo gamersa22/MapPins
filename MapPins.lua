@@ -7141,7 +7141,7 @@ local function CompassPinAddCallback(i)
 			for _,pinData in pairs(mapData) do
 				local AchName,Completed,Required=GetAchievementCriterion(pinData[3],pinData[4])
 				if (Completed==Required)==CustomPins[i].done and AchName~="" then
-					COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,AchName,pinData[1],pinData[2])
+					COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,AchName,pinData[1],pinData[2])
 				end
 			end
 		end
@@ -7152,7 +7152,7 @@ local function CompassPinAddCallback(i)
 		if mapData then
 			for i1,pinData in ipairs(mapData) do
 				if pinData[3]==level/10+2 and not (SavedVars.TimeBreachClosed[subzone] and SavedVars.TimeBreachClosed[subzone][i1]) then
-					COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,"TimeRift"..num,pinData[1],pinData[2])
+					COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,"TimeRift"..num,pinData[1],pinData[2])
 					num=num+1
 				end
 			end
@@ -7183,7 +7183,7 @@ local function CompassPinAddCallback(i)
 					end
 					local HaveItem=(AchievementItems[ pinData[3] ] and AchievementItems[ pinData[3] ][ pinData[4] ]) and true or false
 					if Completed==CustomPins[i].done and HaveItem==CustomPins[i].done then
-						COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,AchName..num,pinData[1],pinData[2])
+						COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,AchName..num,pinData[1],pinData[2])
 						num=num+1
 					end
 				end
@@ -7195,7 +7195,7 @@ local function CompassPinAddCallback(i)
 			for _, pinData in pairs(mapData) do
 				local AchName, _, done=GetLoreBookInfo(1, pinData[3], pinData[4])
 				if done==CustomPins[i].done and AchName~="" then
-					COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,AchName..tostring(pinData[1]),pinData[1],pinData[2])
+					COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,AchName..tostring(pinData[1]),pinData[1],pinData[2])
 				end
 			end
 		end
@@ -7206,7 +7206,7 @@ local function CompassPinAddCallback(i)
 				if itemData and itemData.itemType==ITEMTYPE_TROPHY then
 					for _, pinData in pairs(mapData) do
 						if GetItemId(BAG_BACKPACK,itemData.slotIndex)==pinData[3] then
-							COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,itemData.name,pinData[1],pinData[2])
+							COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,itemData.name,pinData[1],pinData[2])
 						end
 					end
 				end
@@ -7219,7 +7219,7 @@ local function CompassPinAddCallback(i)
 			for chType, chData in pairs(mapData) do
 				for chest, pinData in pairs(chData) do
 					if chType==1 or FindersKeepers then
-						COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,"Chest_"..subzone.."_"..chType.."_"..chest,pinData[1],pinData[2])
+						COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,"Chest_"..subzone.."_"..chType.."_"..chest,pinData[1],pinData[2])
 					end
 				end
 			end
@@ -7227,7 +7227,7 @@ local function CompassPinAddCallback(i)
 		mapData=CustomChestData[subzone]
 		if mapData then
 			for chest, pinData in pairs(mapData) do
-				COMPASS_PINS.PinManager:CreatePin(CustomPins[i].name,"Chest_"..subzone.."_3_"..chest,pinData[1],pinData[2])
+				COMPASS_PINS.pinManager:CreatePin(CustomPins[i].name,"Chest_"..subzone.."_3_"..chest,pinData[1],pinData[2])
 			end
 		end
 	end
@@ -7243,7 +7243,7 @@ local function AddCompassCustomPin(id,i)
 			COMPASS_PINS:AddCustomPin(CustomPins[i].name, function() CompassPinAddCallback(i) end, CompassPinLayout)
 			COMPASS_PINS:RefreshPins(CustomPins[i].name)
 		else
-			COMPASS_PINS.PinManager:RemovePins(CustomPins[i].name)
+			COMPASS_PINS.pinManager:RemovePins(CustomPins[i].name)
 --			pl("["..id.."] Compass pin "..i.." disabled")
 		end
 	end
@@ -8207,4 +8207,3 @@ end end
 /script local i,zone=1,GetCurrentMapZoneIndex() local id=GetPOIType(zone, i) local Name=GetPOIInfo(zone, i) StartChatInput('['..i..']={"'..Name..'",'..id..'},')
 
 --]]
-
